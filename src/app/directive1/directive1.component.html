@@ -1,0 +1,46 @@
+<!-- <p>directive1 works!</p> -->
+<h3>Angular works date 14/10/2022</h3>
+
+<h4>Structural Directives</h4>
+
+<div>
+    <h3>This is *ngIf Structural Directives</h3>
+    <p *ngIf="(age>30)|| showData"> your age is{{age}} and this is greater than 30</p>
+</div>
+
+<h3>This is *ngFor Structural Directives</h3>
+    <select>
+        <option *ngFor="let s of study">{{s}}</option>
+    </select>
+
+    <h3>This is *ngSwitch Structural Directives</h3>
+
+    <div [ngSwitch]="num">
+        <div *ngSwitchCase  = "1">Monday</div>
+        <div *ngSwitchCase  = "2">Tuesday</div>
+        <div *ngSwitchCase  = "3">Wensday</div>
+        <div *ngSwitchCase  = "4">Thursday</div>
+        <div *ngSwitchCase  = "5">Friday</div>
+        <div *ngSwitchCase  = "6">Saturday</div>
+        <div *ngSwitchCase  = "7">Sunday</div>
+        <div *ngSwitchDefault>This is default Case</div>
+
+    </div>
+
+    <h3>Attribute Directives</h3>
+    <h4>ngClass Attribute Directive</h4>
+<p class="testclass1">This first Normal class</p>
+<p [ngClass]="testclass2"> this is my first Attribute directive</p>
+
+<div [ngClass]="showData? 'test1':'test2'">
+    <p>this is attribute condtional directive with css</p>
+</div>
+
+<h3> This is style attribute directives</h3>
+<div style="color: blue">This is normal Style</div>
+
+<div [ngStyle]="{'color':'red', 'font-size':'40px'}">This is Ngstyle</div>
+
+<div [ngStyle]="showData ? myStyle1: myStyle2">
+    <p>thi is conditionally an style from ts with the help of ngStyle</p>
+</div>

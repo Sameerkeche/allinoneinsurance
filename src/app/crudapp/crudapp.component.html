@@ -1,0 +1,64 @@
+<p>crudapp works!</p>
+<div class="container bg-danger">
+<form style="width: 50%;"  [formGroup]="myForm" (ngSubmit)="onSubmitReactiveForm(myForm)" >
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" name="fname" formControlName="fname" class="form-control">
+    </div>
+<div class="form-group">
+    <label >Last Name:</label>
+    <input type="text" name="lname" formControlName="lname" class="form-control">
+</div>
+<div class="form-group">
+    <label>Email</label>
+    <input type="text" name="email" formControlName="email" class="form-control" >
+</div>
+<div class="form-group">
+    <label>Password</label>
+    <input type="password" name="pass" formControlName="pass" class="form-control">
+</div>
+<div class="form-group">
+    <label>Confirm Password</label>
+    <input type="password" name="cpass" formControlName="cpass" class="form-control">
+</div><br>
+<button class="btn btn-info">Submit</button>
+</form>
+</div>
+<!-- <table class="table table-info">
+    <tr>
+        <th>fname</th>
+        <th>lname</th>
+        <th>email</th>
+        <th>password</th>
+        <th>cpass</th>
+    </tr>
+<tr *ngFor="let i of data1">
+    <td>{{i.fname}}</td>
+    <td>{{i.lname}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.pass}}</td>
+    <td>{{i.cpass}}</td>
+<td><Button class="btn tbn-success" (click)="onDelete(myForm)">Delete</Button></td>
+</tr>
+</table> -->
+<div class="data mt-3" *ngIf="showData">
+<table class="table table-borderd">
+    <tr>
+        <th>fname</th>
+        <th>lname</th>
+        <th>email</th>
+        <th>password</th>
+        <th>cpass</th>
+    </tr>
+<tr *ngFor="let i of data1">
+    <td>{{i.fname}}</td>
+    <td>{{i.lname}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.pass}}</td>
+    <td>{{i.cpass}}</td>
+<td><Button class="btn tbn-success" (click)="onDelete(myForm)">Delete</Button></td>
+<td><button class="btn btn-waring" (click)="onupdate(myForm)">Update</button></td>
+
+</tr>
+</table>
+</div>

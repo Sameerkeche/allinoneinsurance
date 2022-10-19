@@ -1,0 +1,25 @@
+<!-- <p>demo works!</p> -->
+<h2><b>Reactive-Form</b></h2>
+<form [formGroup]="myForm" (ngSubmit)="onSubmitReactiveForm()">
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" name="fname" formControlName="fname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" name="laname" formControlName="mname" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Email:</label>
+        <input type="text" name="email" formControlName="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        <input type="password" name="pass" formControlName="pass" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Confirm Password:</label>
+        <input type="password" name="cpass" fromControlName="cpass" class="form-control">
+    </div><br>
+    <button class="btn btn-info">Submit:</button>
+</form>

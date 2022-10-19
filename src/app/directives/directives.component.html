@@ -1,0 +1,53 @@
+<!-- <p>directives works!</p> -->
+<h2>Angular directives</h2>
+<h3>Stuctural directives</h3>
+<div>
+    <h4>this is *ngFor Structural directives</h4>
+    <p *ngIf= "(age>18)||showData"> your age is{{age}} and this is greter than 18</p>
+</div>
+
+<h4>This is *ngFor structural Directive</h4>
+    <select >
+        <!-- <option value="">Suraj</option>
+        <option value="">Satish</option> -->
+        <option *ngFor ="let nm of stud">{{nm}}</option>
+    </select>
+    <h4>This is *ngSwitch structural Directive</h4>
+    <div [ngSwitch]="num">
+        <div *ngSwitchCase = "1">One</div>
+        <div *ngSwitchCase = "2">Two</div>
+        <div *ngSwitchCase = "3">Three</div>
+        <div *ngSwitchCase = "4">Four</div>
+        <div *ngSwitchCase = "5">Five</div>
+        <div *ngSwitchDefault>This is default case</div>
+    </div>
+
+    <br><br><br>
+
+    <h3>Attribute Directives</h3>
+    <h4>ngClass Attribute Directive</h4>
+    <p class="testClass">Hello this is my noraml class</p>
+
+    <p [ngClass]="testClass1">Hello this is my attribute directive ngClass</p>
+
+    <div [ngClass]="showData ? 'test1': 'test2'">
+        <p>This is an attribute directive with conditional CSS</p>
+    </div>
+
+    <h4>ngStyle Attribute Directive</h4>
+
+    <div style="color:red">
+        <p>This is an normal style</p>
+    </div>
+
+    <div [ngStyle]="{'color':'pink', 'font-size': '20px'}">
+        <p>This is an ngStyle</p>
+    </div>
+
+    <div [ngStyle]="myStyle">
+        <p>thi is an style from ts with the help of ngStyle</p>
+    </div>
+
+    <div [ngStyle]="showData ? myStyle: myStyle2">
+        <p>thi is conditionally an style from ts with the help of ngStyle</p>
+    </div>
